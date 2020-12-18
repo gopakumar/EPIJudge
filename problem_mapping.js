@@ -65,7 +65,7 @@ problem_mapping = {
                 "passed": 0,
                 "total": 10000
             },
-            "Python: closest_int_same_weight.py": { 
+            "Python: closest_int_same_weight.py": {
                 "passed": 0,
                 "total": 10000
             }
@@ -2142,7 +2142,7 @@ problem_mapping = {
                 "total": 46
             },
             "Python: max_sum_subarray.py": {
-                "passed": 0,
+                "passed": 1001,
                 "total": 1001
             }
         },
@@ -2156,7 +2156,7 @@ problem_mapping = {
                 "total": 1003
             },
             "Python: number_of_score_combinations.py": {
-                "passed": 0,
+                "passed": 1003,
                 "total": 1003
             }
         },

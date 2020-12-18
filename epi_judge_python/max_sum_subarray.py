@@ -5,7 +5,20 @@ from test_framework import generic_test
 
 def find_maximum_subarray(A: List[int]) -> int:
     # TODO - you fill in here.
-    return -1
+    tmax = 0
+    cmax = 0
+    csum = 0
+    for a in A:
+        if a > (a+csum):
+            csum =a
+        else:
+            csum+=a
+        tmax = max(csum,tmax)
+
+
+
+        
+    return tmax
 
 
 if __name__ == '__main__':
