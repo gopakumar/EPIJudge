@@ -9,14 +9,16 @@ def num_combinations_for_final_score(final_score: int,
     myd={}
 
     def helper (score:int, runs:List[int]) -> int:
-        if((score,len(runs)) in myd ):
-            return myd[(score,len(runs))]
+        
 
         # TODO - you fill in here.
         if score == 0:
             return 1
         elif score < 0:
             return 0
+
+        if((score,len(runs)) in myd ):
+            return myd[(score,len(runs))]
         ret = 0
         for i in range(len(runs)):
             ind = runs[i]
