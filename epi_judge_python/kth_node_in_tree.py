@@ -1,3 +1,5 @@
+
+
 import functools
 from typing import Optional
 
@@ -17,7 +19,20 @@ class BinaryTreeNode:
 def find_kth_node_binary_tree(tree: BinaryTreeNode,
                               k: int) -> Optional[BinaryTreeNode]:
     # TODO - you fill in here.
-    return None
+    while tree:
+        lft = 0
+        rht = 0
+        if tree.left:
+            lft = tree.left.size
+        if tree.right:
+            rht = tree.right.size
+        if k <= lft:
+            tree = tree.left
+        elif k> lft+1:
+            k =k-lft-1
+            tree = tree.right
+        else:
+            return tree
 
 
 @enable_executor_hook

@@ -1,3 +1,4 @@
+
 import functools
 from typing import Optional
 
@@ -9,7 +10,20 @@ from test_framework.test_utils import enable_executor_hook
 
 def find_successor(node: BinaryTreeNode) -> Optional[BinaryTreeNode]:
     # TODO - you fill in here.
-    return None
+    if not node:
+        return None
+    if node.right:
+        node = node.right
+        while node.left:
+            node = node.left
+        return node
+
+    while node.parent and node.parent.left != node:
+        node =node.parent
+    if node.parent:
+        return node.parent
+    else:
+        return None
 
 
 @enable_executor_hook
